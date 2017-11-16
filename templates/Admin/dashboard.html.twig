@@ -4,18 +4,18 @@
 {% block title 'Admin Dashboard' %}
 
 {% block body %}
-    {# FIXME: Afficher Hello <firstname> <lastname> #}
-    Hello {{ admin.firstname }} {{ admin.lastname }}
+	{# FIXME: Afficher Hello <firstname> <lastname> #}
+	Hello {{ admin.firstname }} {{ admin.lastname }}
 
 
-    {# FIXME: Lister les utilisateurs et afficher un lien de suppression #}
+	{# FIXME: Lister les utilisateurs et afficher un lien de suppression #}
 
-    <ul>
-        {% for unUser in users %}
-            <li>
-                <a href="/profile/{{ unUser.id }}">{{ unUser.firstname }} {{ unUser.lastname }} - {{ unUser.email }}</a>
-                <a href="/admin/delete-user/{{ unUser.id }}">delete</a>
-            </li>
-        {% endfor %}
-    </ul>
+	<ul>
+		{% for unUser in users %}
+			<li>
+				<a href="/profile/{{ unUser.id }}">{{ unUser.firstname }} {{ unUser.lastname }} - {{ unUser.email }}</a>
+				<a href="/admin/delete-user/{{ unUser.id }}">delete</a>
+			</li>
+		{% endfor %}
+	</ul>
 {% endblock %}

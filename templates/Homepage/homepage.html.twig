@@ -4,25 +4,27 @@
 {% block title 'Homepage' %}
 
 {% block body %}
-    <p>Welcome to TP4!</p>
+	<p>Welcome to TP4!</p>
 
-    {#
-     FIXME:
-        Lister les utilisateurs mais pas les admins.
-        L'utilisateur actuelement connecté doit être en gras.
-        Au clique sur un utilisateur je suis redirigé sur sa page de profile
-     #}
-    <ul>
-{% for unUser in users %}
-    <li>
-        {% if unUser.id == userCo.id %}
-        <strong><a href="/profile/{{ unUser.id }}">{{ unUser.firstname }} {{ unUser.lastname }} - {{ unUser.email }}</a></strong>
-            {% else %}
-                <a href="/profile/{{ unUser.id }}">{{ unUser.firstname }} {{ unUser.lastname }} - {{ unUser.email }}</a>
-        {% endif %}
-    </li>
-{% endfor %}
+	{#
+	 FIXME:
+		Lister les utilisateurs mais pas les admins.
+		L'utilisateur actuelement connecté doit être en gras.
+		Au clique sur un utilisateur je suis redirigé sur sa page de profile
+	 #}
+	<ul>
+		{% for unUser in users %}
+			<li>
+				{% if unUser.id == userCo.id %}
+					<strong><a href="/profile/{{ unUser.id }}">{{ unUser.firstname }} {{ unUser.lastname }}
+							- {{ unUser.email }}</a></strong>
+				{% else %}
+					<a href="/profile/{{ unUser.id }}">{{ unUser.firstname }} {{ unUser.lastname }}
+						- {{ unUser.email }}</a>
+				{% endif %}
+			</li>
+		{% endfor %}
 
 
-    </ul>
+	</ul>
 {% endblock %}

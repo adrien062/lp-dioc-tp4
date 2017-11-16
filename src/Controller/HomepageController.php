@@ -21,7 +21,7 @@ class HomepageController extends Controller
         $userCo=$this->getUser();
         $em=$this->getDoctrine()->getManager();
         $repo=$em->getRepository(User::class);
-        $users = $repo->findBy(array("isAdmin" => false));
+        $users = $repo->findBy(["isAdmin" => false]);
 
         return $this->render('Homepage/homepage.html.twig', ['users' => $users, 'userCo' => $userCo]);
     }

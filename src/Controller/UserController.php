@@ -18,7 +18,7 @@ class UserController extends Controller
     public function myProfileAction()
     {
         $user=$this->getUser();
-        return $this->render('User/my_profile.html.twig', array('user'=>$user));
+        return $this->render('User/my_profile.html.twig', ['user'=>$user]);
     }
 
     /**

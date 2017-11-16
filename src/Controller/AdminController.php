@@ -23,7 +23,7 @@ class AdminController extends Controller
         $userAdmin=$this->getUser();
         $em=$this->getDoctrine()->getManager();
         $repo=$em->getRepository(User::class);
-        $users = $repo->findBy(array("isAdmin" => false));
+        $users = $repo->findBy(["isAdmin" => false]);
 
 
         return $this->render('Admin/dashboard.html.twig', ['users' => $users,'admin'=>$userAdmin]);

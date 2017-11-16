@@ -4,22 +4,22 @@
 {% block title 'My Profile' %}
 
 {% block body %}
-    {#
-        Fixme afficher sous forme de <ul> <li>
-        firstname
-        lastname
-        email
-        birthday
-        createAt
-        updatedAt
-    #}
+	{#
+		Fixme afficher sous forme de <ul> <li>
+		firstname
+		lastname
+		email
+		birthday
+		createAt
+		updatedAt
+	#}
 
-    <ul>
-        <li>First name: {{ user.firstname }}</li>
-        <li>Last name: {{ user.lastname }}</li>
-        <li>Email: {{ user.email }}</li>
-        <li>Birthday: {{ user.birthday|date('d-m-Y H:i:s') }}</li>
-        <li>Created at: {{ user.createdAt|date('d-m-Y H:i:s') }}</li>
-        <li>Updated at: {{ user.updatedAt|date('d-m-Y H:i:s') }}</li>
-    </ul>
+	<ul>
+		<li>First name: {{ user.firstname }}</li>
+		<li>Last name: {{ user.lastname }}</li>
+		<li>Email: {{ user.email }}</li>
+		<li>Birthday: {{ user.birthday|date('d-m-Y H:i:s') }}</li>
+		<li>Created at: {{ user.createdAt|date('d-m-Y H:i:s') }}</li>
+		<li>Updated at: {{ user.updatedAt|date('d-m-Y H:i:s') }}</li>
+	</ul>
 {% endblock %}
